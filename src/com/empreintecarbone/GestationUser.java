@@ -23,7 +23,7 @@ public class GestationUser {
         else {
             user.setName(name);
             user.setAge(age);
-            System.out.println("modifier avec success");
+            System.out.println("modifier avec success , "+ users.values());
         }
     }
 
