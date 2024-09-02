@@ -1,14 +1,17 @@
 package com.empreintecarbone;
 
+import java.util.ArrayList;
+
 public class User {
     private String name;
     private int age;
-    private String Id;
+    private String id;
+    private ArrayList<CarbonConsumption> carbonConsumption;
 
-    public User(String name, int age, String Id){
+    public User(String name, int age, String id){
         this.name = name;
         this.age = age;
-        this.Id = Id;
+        this.id = id;
     }
     public int getAge() {
         return age;
@@ -19,7 +22,7 @@ public class User {
     }
 
     public String getId() {
-        return Id;
+        return id;
     }
 
     public void setAge(int age) {
@@ -27,7 +30,7 @@ public class User {
     }
 
     public void setId(String id) {
-        Id = id;
+        id = id;
     }
 
     public void setName(String name) {
@@ -39,8 +42,14 @@ public class User {
         return "User{" +
                 "name='" + name + '\'' +
                 "age='" + age + '\'' +
-                "id ='" + Id + '\'' +
+                "id ='" + id + '\'' +
                 '}';
+    }
+
+    public void getInformations() {
+        System.out.println("Nom: " + this.name);
+        System.out.println("Age: " + this.age);
+        System.out.println("Identifiant: " + this.id);
     }
 
 
