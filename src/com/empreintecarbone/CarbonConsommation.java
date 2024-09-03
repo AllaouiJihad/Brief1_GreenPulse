@@ -2,10 +2,17 @@ package com.empreintecarbone;
 
 import java.time.LocalDate;
 
-public class CarbonConsumption {
+public class CarbonConsommation {
     private int value;
     private LocalDate StartDate;
     private LocalDate EndDate;
+
+
+    public CarbonConsommation(int value, LocalDate startDate, LocalDate endDate) {
+        this.value = value;
+        StartDate = startDate;
+        EndDate = endDate;
+    }
 
     public int getValue() {
         return value;
@@ -30,4 +37,5 @@ public class CarbonConsumption {
     public void setValue(int value) {
         this.value = value;
     }
+
 }

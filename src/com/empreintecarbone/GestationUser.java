@@ -51,4 +51,33 @@ public class GestationUser {
             }
         }
     }
+
+    public void getUser(String id){
+
+        if (users.get(id) != null){
+            System.out.println(users.get(id));
+        }
+        else {
+            System.out.println("aucun utilisateur trouvé !!");
+        }
+    }
+
+    public boolean UserExist(String id){
+        if (users.get(id) == null){
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    public void addConsomationToUser(String id, CarbonConsommation consommation){
+
+        User user = users.get(id);
+        if(user != null){
+            user.addConsomation(consommation);
+            System.out.println("consommation ajouter avec sucess ,avec volume = "+ consommation.getValue());
+        }else {
+            System.out.println("aucun utilisateur trouve !");
+        }
+    }
 }

@@ -1,17 +1,19 @@
 package com.empreintecarbone;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class User {
     private String name;
     private int age;
     private String id;
-    private ArrayList<CarbonConsumption> carbonConsumption;
+    private List<CarbonConsommation> carbonConsumptions;
 
     public User(String name, int age, String id){
         this.name = name;
         this.age = age;
         this.id = id;
+        this.carbonConsumptions = new ArrayList<>();
     }
     public int getAge() {
         return age;
@@ -46,11 +48,15 @@ public class User {
                 '}';
     }
 
-    public void getInformations() {
-        System.out.println("Nom: " + this.name);
-        System.out.println("Age: " + this.age);
-        System.out.println("Identifiant: " + this.id);
+
+    public void addConsomation(CarbonConsommation consommation) {
+        this.carbonConsumptions.add(consommation);
     }
+
+    public List<CarbonConsommation> getConsommations() {
+        return carbonConsumptions;
+    }
+
 
 
 }
